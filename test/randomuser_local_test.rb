@@ -30,7 +30,7 @@ describe RandomuserLocal do
     let(:user) { RandomuserLocal.generate_female }
 
     it 'returns a female headshot path' do
-      user[:picture].must_match /^\/assets\/randomuser_local\/portraits\/women/
+      user[:picture].must_match /portraits\/women/
     end
   end
 
@@ -39,7 +39,7 @@ describe RandomuserLocal do
     let(:user) { RandomuserLocal.generate_male }
 
     it 'returns a male headshot path' do
-      user[:picture].must_match /^\/assets\/randomuser_local\/portraits\/men/
+      user[:picture].must_match /portraits\/men/
     end
 
   end
