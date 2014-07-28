@@ -6,9 +6,13 @@ describe RandomuserLocal do
   describe '#generate' do
 
     describe 'with no arguments' do
+
+      let(:user) { RandomuserLocal.generate }
+
       it 'returns a user hash' do
-        RandomuserLocal.generate.is_a?(Hash).must_equal true
+        user.is_a?(Hash).must_equal true
       end
+
     end
 
     describe 'when passed a number' do
@@ -37,7 +41,7 @@ describe RandomuserLocal do
     it 'returns a male headshot path' do
       user[:picture].must_match /^\/assets\/randomuser_local\/portraits\/men/
     end
-  end
 
+  end
 
 end
