@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Grab the a single random user, returned as a hash:
+Grab a single random user, returned as a hash:
 
     RandomuserLocal.generate
 
