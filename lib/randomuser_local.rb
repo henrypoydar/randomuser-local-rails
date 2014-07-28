@@ -28,7 +28,7 @@ private
     gender = %w(female male).shuffle.first if gender.nil?
     user[:gender] = gender
     if gender == 'female'
-      user[:picture] = "/assets/randomuser_local/portraits/women/#{rand(0..95)}.jpg"
+      user[:picture] = asset_path "/assets/portraits/women/#{rand(0..95)}.jpg"
       user[:name][:first] = random_user_element('female_first_names')
       user[:name][:title] = %w(ms mrs).shuffle.first
     else
