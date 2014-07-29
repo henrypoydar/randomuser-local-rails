@@ -1,4 +1,5 @@
-require "randomuser_local/engine"
+require "randomuser_local/version"
+require "randomuser_local/engine" if defined?(::Rails)
 
 module RandomuserLocal
 
@@ -28,11 +29,11 @@ private
     gender = %w(female male).shuffle.first if gender.nil?
     user[:gender] = gender
     if gender == 'female'
-      user[:picture] = "portraits/women/#{rand(0..95)}.jpg"
+      user[:picture] = "randomuser_local/portraits/women/#{rand(0..95)}.jpg"
       user[:name][:first] = random_user_element('female_first_names')
       user[:name][:title] = %w(ms mrs).shuffle.first
     else
-      user[:picture] = "portraits/men/#{rand(0..99)}.jpg"
+      user[:picture] = "randomuser_local/portraits/men/#{rand(0..99)}.jpg"
       user[:name][:first] = random_user_element('male_first_names')
       user[:name][:title] = 'mr'
     end
