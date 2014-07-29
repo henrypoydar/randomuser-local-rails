@@ -8,7 +8,7 @@ Uses the US data here: https://github.com/RandomAPI/Randomuser.me-Data
 
 Add this line to your application's Gemfile:
 
-    gem 'randomuser-local'
+    gem 'randomuser-local-rails', require: 'randomuser_local'
 
 And then execute:
 
